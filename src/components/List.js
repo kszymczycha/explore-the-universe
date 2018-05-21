@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import Item from './Item';
+import '../scss/list.scss';
 
 class List extends Component {
 

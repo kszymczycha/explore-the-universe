@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import '../scss/form.scss';
 
 class Form extends Component {
 
@@ -27,11 +28,10 @@ class Form extends Component {
         return (
             <div>
                 <form onSubmit={this.onSubmit}>
-                    <label>Search:</label>
-                    <br />
-                    <input type="text" name="search" value={this.state.search} onChange={this.onChange}/>
-                    <br />
-                    <button type="submit">Submit</button>
+                    <div>
+                        <input type="text" name="search" value={this.state.search} onChange={this.onChange}/>
+                        <button type="submit">Submit</button>
+                    </div>
                 </form>
             </div>
         )
