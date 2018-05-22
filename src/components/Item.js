@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import ReactHtmlParser from 'react-html-parser';
+import { connect } from 'react-redux';
 import '../scss/item.scss';
 
 class Item extends Component {
@@ -12,11 +13,12 @@ class Item extends Component {
         }
     }
 
-    handleImageLoaded(e) {
+    handleImageLoaded() {
         this.setState({
             imgBgClasses: 'hideBgImage',
             imgClasses: 'imgShow'
         })
+        this.props.increaseImage();
     }
 
     render() {
@@ -34,4 +36,14 @@ class Item extends Component {
     }
 }
 
-export default Item;
+const mapDispatchToProps = (dispatch) => {
+    return {
+        increaseImage:() => {
+            dispatch({
+                type: 'IMAGE_LOADED'        
+            });
+        }
+    }
+}
+
+export default connect(null, mapDispatchToProps)(Item);

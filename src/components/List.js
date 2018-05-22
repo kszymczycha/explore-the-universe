@@ -6,9 +6,6 @@ import '../scss/list.scss';
 class List extends Component {
 
     render() {
-
-        console.log(this.props.items);
-
         const items = this.props.items.map((item, key) => 
             <Item key={key} description={item.data[0].description} img={item.links[0].href} />
         );
@@ -24,7 +21,7 @@ class List extends Component {
 
 const mapStateToProps = (state) => {
     return {
-        items: state.items
+        items: state.items.items
     }
 }
 

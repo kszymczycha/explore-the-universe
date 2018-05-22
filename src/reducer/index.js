@@ -1,17 +1,8 @@
-const initialState = {
-    items: []
-}
+import { combineReducers } from 'redux';
+import itemReducer from './itemReducer';
+import imageReducer from './imageReducer';
 
-const reducer = (state = initialState, action) => {
-    switch (action.type) {
-        case 'FETCH_DATA':
-            return {
-                ...state,
-                items: action.payload
-            }
-        default: 
-            return state;
-    }
-}
-
-export default reducer;
+export default combineReducers({
+    items: itemReducer,
+    images: imageReducer
+})
