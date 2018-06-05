@@ -29,8 +29,8 @@ class Form extends Component {
             <div>
                 <form onSubmit={this.onSubmit}>
                     <div>
-                        <input type="text" name="search" value={this.state.search} onChange={this.onChange}/>
-                        <button type="submit">Submit</button>
+                        <input className="sharp" type="text" name="search" value={this.state.search} onChange={this.onChange} placeholder="Explode the Universe"/>
+                        <button className="btn btn-primary btn-lg sharp" type="submit">Submit</button>
                     </div>
                 </form>
             </div>
