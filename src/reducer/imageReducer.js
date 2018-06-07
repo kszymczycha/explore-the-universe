@@ -4,6 +4,11 @@ const initialState = {
 
 const reducer = (state = initialState, action) => {
     switch (action.type) {
+        case 'RESET_LOADED_IMAGES_COUNT':
+            return {
+                ...state,
+                imagesCount: initialState.imagesCount
+            }
         case 'IMAGE_LOADED':
             return {
                 ...state,
