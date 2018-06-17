@@ -32,7 +32,9 @@ class List extends Component {
         return(
             <div>
                 {this.state.itemCurrentNumber > 0 && this.state.progress < 100 ? <Progress progress={this.state.progress}/> : null}
-                <ul>{items}</ul>
+                <div className='wrapper'>
+                    {items}
+                </div>
             </div>
         )
     }

@@ -23,7 +23,7 @@ class Item extends Component {
 
     render() {
         return (
-            <li>
+            <div>
                 <div className="imgContainer">
                     <div className={this.state.imgBgClasses}>
                         <img className={this.state.imgClasses} src={this.props.img} onLoad={this.handleImageLoaded.bind(this)} />
@@ -31,7 +31,7 @@ class Item extends Component {
                     <hr />
                     <p>{ReactHtmlParser(this.props.description)}</p>
                 </div>
-            </li>
+            </div>
         )
     }
 }
