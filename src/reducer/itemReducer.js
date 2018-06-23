@@ -1,5 +1,6 @@
 const initialState = {
-    items: []
+    items: [],
+    submit: false
 }
 
 const reducer = (state = initialState, action) => {
@@ -7,7 +8,8 @@ const reducer = (state = initialState, action) => {
         case 'FETCH_DATA':
             return {
                 ...state,
-                items: action.payload
+                items: action.payload,
+                submit: true
             }
         default: 
             return state;

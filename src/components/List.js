@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import Item from './Item';
 import Progress from './Progress';
+import Woops from './Woops';
 import '../scss/list.scss';
 
 class List extends Component {
@@ -26,6 +27,11 @@ class List extends Component {
     }
 
     render() {
+
+        if (this.props.submit && this.props.items.length === 0) {
+            return(<Woops />)
+        }
+
         const items = this.props.items.map((item, key) => 
             <Item key={key} description={item.data[0].description} img={item.links[0].href} />
         );
@@ -44,6 +50,7 @@ class List extends Component {
 const mapStateToProps = (state) => {
     return {
         items: state.items.items,
+        submit: state.items.submit,
         count: state.images.imagesCount
     }
 }
@@ -56,11 +63,6 @@ const mapDispatchToProps = (dispatch) => {
             });
         }
     }
-}
-
-List.defaultProps = {
-    items: [],
-    count: 0
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(List);

@@ -1,0 +1,15 @@
+.whoops {
+    text-align: center;
+    line-height: 2;
+    padding: 20px;
+    color: #888888;
+    font-size: 1em;
+    width: 70%;
+    margin: 0 auto;
+}
+
+@media(min-width: 700px) {
+    .whoops {
+        font-size: 2em;
+    }
+}
