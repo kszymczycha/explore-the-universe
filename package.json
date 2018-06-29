@@ -1,7 +1,7 @@
 {
-  "name": "nasa_api_reactjs",
+  "name": "explore_the_universe",
   "version": "1.0.0",
-  "description": "A simple application using nasa api and reactjs",
+  "description": "A simple application using nasa api, react and redux",
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --mode development --open --hot",
