@@ -1,15 +1,20 @@
 {
   "name": "explore_the_universe",
   "version": "1.0.0",
+  "homepage": "https://kszymczycha.github.io/explore_the_universe",
+  "email": "kamilszymczycha@gmail.com",
   "description": "A simple application using nasa api, react and redux",
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --mode development --open --hot",
-    "build": "webpack --mode production"
+    "build": "webpack --mode production",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "author": "kszymczycha",
   "license": "MIT",
   "dependencies": {
+    "gh-pages": "^2.0.0",
     "react": "^16.3.2",
     "react-dom": "^16.3.2",
     "react-html-parser": "^2.0.2",
