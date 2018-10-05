@@ -1,4 +1,4 @@
 # Explore The Universe
 This application allows viewing information about Universe.
 
-![etu](https://user-images.githubusercontent.com/30631373/42105751-d3bcf07e-7bd1-11e8-9b8b-8f13867dac9c.png)
+![screenshot 2018-10-05 at 16 43 13](https://user-images.githubusercontent.com/30631373/46542427-a6a56a00-c8be-11e8-8a0d-d92b7aaa1346.png)
